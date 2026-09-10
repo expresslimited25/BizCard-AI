@@ -29,7 +29,7 @@ export default function PublicPage({ slug }: { slug: string }) {
   // Track view
   useEffect(() => {
     if (business?.id) {
-      void supabase.rpc("increment_view_count", { business_id: business.id });
+      const track = async () => { try { await supabase.rpc("increment_view_count", { business_id: business.id }); } catch {} }; void track();
     }
   }, [business?.id]);
 
