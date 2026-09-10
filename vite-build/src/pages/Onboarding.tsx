@@ -476,9 +476,6 @@ function StepAi({ ai, setAi, generating, onGenerate, businessName }: { ai:AiCont
   );
 }
 
-const inputCls = "w-full rounded-xl border bg-card px-3 py-2 text-sm outline-none focus:border-primary transition";
-const textareaCls = `${inputCls} resize-none`;
-
 function StepPreview({ form, ai }: { form:Form; ai:AiContent|null }) {
   const cover = form.cover_url ? getPublicUrl(form.cover_url) : null;
   const logo = form.logo_url ? getPublicUrl(form.logo_url) : null;
